@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 
 const RootLayout = ({ children }) => {
   return (
-    <div className="font-montserrat">
+    <section className="font-montserrat max-w-[1440px] mx-auto bg-slate-50">
       <Header />
-      <main>{children}</main>
-    </div>
+      <main className="min-h-[90vh] px-3 md:px-12">{children}</main>
+    </section>
   );
 };
 
