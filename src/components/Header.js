@@ -1,22 +1,24 @@
 import Link from "next/link";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const { products } = useSelector((state) => state.product);
+  const categories = [...new Set(products?.map((product) => product.category))];
   const links = (
     <>
       <li>
-        <a>{"eknwfgo"}</a>
+        <a>{products?.length}</a>
       </li>
       <li tabIndex={0}>
         <details>
           <summary>Components</summary>
           <ul className="p-2 bg-slate-200">
-            <li>
-              <a>CPU 1</a>
-            </li>
-            <li>
-              <a>Motherboard</a>
-            </li>
+            {categories?.map((category, idx) => (
+              <li key={idx}>
+                <Link href="">{category}</Link>
+              </li>
+            ))}
           </ul>
         </details>
       </li>
@@ -53,7 +55,9 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost upper-case text-xl">Terabyte</a>
+        <Link href="/" className="btn btn-ghost upper-case text-xl">
+          Terabyte
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -68,15 +72,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// export const getStaticProps = async () => {
-//   const res = await fetch("http://localhost:3000/api/products"); // internal API connected with mongoDB
-//   const data = await res.json();
-//   console.log("habvfduewbrfgniowvfgbwsiuv", data);
-//   return {
-//     props: {
-//       products: data.data,
-//     },
-//     revalidate: 10,
-//   };
-// };
