@@ -1,14 +1,20 @@
 import Link from "next/link";
 import React from "react";
-import { useSelector } from "react-redux";
 
 const Header = () => {
-  const { products } = useSelector((state) => state.product);
-  const categories = [...new Set(products?.map((product) => product.category))];
+  const categories = [
+    { name: "CPU", path: "cpu" },
+    { name: "Motherboard", path: "motherboard" },
+    { name: "RAM", path: "ram" },
+    { name: "Power Supply Unit", path: "power-supply" },
+    { name: "Storage Device", path: "storage" },
+    { name: "Monitor", path: "monitor" },
+    { name: "Others", path: "others" },
+  ];
   const links = (
     <>
       <li>
-        <a>{products?.length}</a>
+        <a>jbd</a>
       </li>
       <li tabIndex={0}>
         <details>
@@ -16,7 +22,9 @@ const Header = () => {
           <ul className="p-2 bg-slate-200">
             {categories?.map((category, idx) => (
               <li key={idx}>
-                <Link href="">{category}</Link>
+                <Link href={`/components/${category?.path}`}>
+                  {category?.name}
+                </Link>
               </li>
             ))}
           </ul>
