@@ -1,0 +1,227 @@
+[
+  {
+    "name": "Intel Core i7-10700K",
+    "category": "CPU / Processor",
+    "price": 329.99,
+    "status": "In Stock",
+    "image": "/images/cpu1.jpg",
+    "description": "Intel Core i7 10th Gen unlocked processor for gaming and content creation.",
+    "keyFeatures": {
+      "Brand": "Intel",
+      "Model": "Core i7-10700K",
+      "Socket": "LGA1200",
+      "Cores": "8",
+      "Threads": "16",
+      "Base Clock": "3.8 GHz",
+      "Max Boost Clock": "5.1 GHz",
+      "TDP": "125W"
+    },
+    "individualRating": 4.5,
+    "averageRating": 4.3,
+    "reviews": [
+      {
+        "username": "gamer123",
+        "rating": 5,
+        "comment": "Great CPU for gaming!"
+      },
+      {
+        "username": "contentcreator",
+        "rating": 4,
+        "comment": "Handles video editing well."
+      }
+    ]
+  },
+  {
+    "name": "AMD Ryzen 9 5900X",
+    "category": "CPU / Processor",
+    "price": 549.99,
+    "status": "In Stock",
+    "image": "/images/cpu2.jpg",
+    "description": "AMD Ryzen 9 5000 series processor with 12 cores and 24 threads.",
+    "keyFeatures": {
+      "Brand": "AMD",
+      "Model": "Ryzen 9 5900X",
+      "Socket": "AM4",
+      "Cores": "12",
+      "Threads": "24",
+      "Base Clock": "3.7 GHz",
+      "Max Boost Clock": "4.8 GHz",
+      "TDP": "105W"
+    },
+    "individualRating": 4.8,
+    "averageRating": 4.7,
+    "reviews": [
+      {
+        "username": "gamer456",
+        "rating": 5,
+        "comment": "Excellent performance for multi-tasking."
+      },
+      {
+        "username": "pcbuilder2000",
+        "rating": 4,
+        "comment": "Good for gaming setups."
+      }
+    ]
+  },
+  {
+    "name": "ASUS ROG Strix B550-F",
+    "category": "Motherboard",
+    "price": 189.99,
+    "status": "In Stock",
+    "image": "/images/mb1.jpg",
+    "description": "High-performance ATX motherboard with PCIe 4.0 support.",
+    "keyFeatures": {
+      "Brand": "ASUS",
+      "Model": "ROG Strix B550-F",
+      "Form Factor": "ATX",
+      "Socket": "AM4",
+      "Memory Slots": "4",
+      "Max Memory": "128GB",
+      "PCIe Slots": "3 x16, 3 x1",
+      "M.2 Slots": "2",
+      "USB Ports": "8 x USB 3.2 Gen 1, 4 x USB 3.2 Gen 2"
+    },
+    "individualRating": 4.8,
+    "averageRating": 4.7,
+    "reviews": [
+      {
+        "username": "gamer123",
+        "rating": 5,
+        "comment": "Great features and performance."
+      },
+      {
+        "username": "pcbuilder2000",
+        "rating": 4,
+        "comment": "Good for gaming setups."
+      }
+    ]
+  },
+  {
+    "name": "GIGABYTE B450M DS3H",
+    "category": "Motherboard",
+    "price": 79.99,
+    "status": "In Stock",
+    "image": "/images/mb2.jpg",
+    "description": "Budget-friendly Micro ATX motherboard with AMD B450 chipset.",
+    "keyFeatures": {
+      "Brand": "GIGABYTE",
+      "Model": "B450M DS3H",
+      "Form Factor": "Micro ATX",
+      "Socket": "AM4",
+      "Memory Slots": "4",
+      "Max Memory": "64GB",
+      "PCIe Slots": "1 x16, 1 x4, 1 x1",
+      "M.2 Slots": "1",
+      "USB Ports": "4 x USB 3.1 Gen 1, 2 x USB 2.0"
+    },
+    "individualRating": 4.2,
+    "averageRating": 4.0,
+    "reviews": [
+      {
+        "username": "budgetgamer",
+        "rating": 4,
+        "comment": "Good value for the price."
+      },
+      {
+        "username": "casualuser",
+        "rating": 3,
+        "comment": "Decent features for an entry-level build."
+      }
+    ]
+  },
+  {
+    "name": "Corsair Vengeance LPX 16GB",
+    "category": "RAM",
+    "price": 89.99,
+    "status": "In Stock",
+    "image": "/images/ram1.jpg",
+    "description": "16GB DDR4 memory module for high-speed performance.",
+    "keyFeatures": {
+      "Brand": "Corsair",
+      "Model": "Vengeance LPX",
+      "Capacity": "16GB (2x8GB)",
+      "Speed": "3200MHz",
+      "Timing": "16-18-18-36",
+      "Voltage": "1.35V",
+      "Color": "Black"
+    },
+    "individualRating": 4.6,
+    "averageRating": 4.4,
+    "reviews": [
+      {
+        "username": "gamerXYZ",
+        "rating": 5,
+        "comment": "Fast and reliable RAM for gaming."
+      },
+      {
+        "username": "pcenthusiast",
+        "rating": 4,
+        "comment": "Good value for the price."
+      }
+    ]
+  },
+  {
+    "name": "G.SKILL Trident Z RGB 32GB",
+    "category": "RAM",
+    "price": 189.99,
+    "status": "In Stock",
+    "image": "/images/ram2.jpg",
+    "description": "32GB DDR4 memory module with RGB lighting for high-performance and aesthetics.",
+    "keyFeatures": {
+      "Brand": "G.SKILL",
+      "Model": "Trident Z RGB",
+      "Capacity": "32GB (2x16GB)",
+      "Speed": "3600MHz",
+      "Timing": "16-19-19-39",
+      "Voltage": "1.35V",
+      "Color": "Black",
+      "RGB": "Yes"
+    },
+    "individualRating": 4.7,
+    "averageRating": 4.6,
+    "reviews": [
+      {
+        "username": "rgblover",
+        "rating": 5,
+        "comment": "Stunning RGB effects and excellent performance."
+      },
+      {
+        "username": "gamemaster",
+        "rating": 5,
+        "comment": "Fast and stable RAM for gaming and multitasking."
+      }
+    ]
+  },
+  {
+    "name": "Samsung 970 EVO Plus 1TB",
+    "category": "Storage Device",
+    "price": 179.99,
+    "status": "In Stock",
+    "image": "/images/storage1.jpg",
+    "description": "High-speed NVMe SSD with 1TB storage capacity.",
+    "keyFeatures": {
+      "Brand": "Samsung",
+      "Model": "970 EVO Plus",
+      "Capacity": "1TB",
+      "Interface": "NVMe PCIe 3.0 x4",
+      "Read Speed": "3500 MB/s",
+      "Write Speed": "3300 MB/s",
+      "Form Factor": "M.2 2280",
+      "Endurance": "600 TBW"
+    },
+    "individualRating": 4.9,
+    "averageRating": 4.8,
+    "reviews": [
+      {
+        "username": "speeddemon",
+        "rating": 5,
+        "comment": "Blazing fast SSD, great for OS and games."
+      },
+      {
+        "username": "videographer",
+        "rating": 4,
+        "comment": "Handles 4K video editing smoothly."
+      }
+    ]
+  }
+]
