@@ -13,9 +13,6 @@ const Header = () => {
   ];
   const links = (
     <>
-      <li>
-        <a>jbd</a>
-      </li>
       <li tabIndex={0}>
         <details>
           <summary>Components</summary>

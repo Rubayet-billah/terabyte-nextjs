@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ProductCard from "@/components/ProductCard";
 import RootLayout from "@/layout/RootLayout";
 import { setProducts } from "@/redux/features/product/productSlice";
 import React, { useEffect } from "react";
@@ -12,7 +13,11 @@ const Homepage = ({ products }) => {
   }, [dispatch, products]);
   return (
     <div>
-      <h1>Monserrat font</h1>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-12">
+        {products?.map((product) => (
+          <ProductCard key={product?.id} product={product} />
+        ))}
+      </section>
     </div>
   );
 };
