@@ -29,6 +29,7 @@ const ProductSelectCard = ({ product }) => {
         product?._id || false
     );
   }, [selectedComponents, product]);
+
   return (
     <div
       className={`p-4 border ${
@@ -38,11 +39,16 @@ const ProductSelectCard = ({ product }) => {
       <div className="flex items-center space-x-4">
         <div className="h-20 w-20 bg-gray-200 rounded-lg flex-shrink-0">
           {product?.image && (
-            <img className="w-full" src={product?.image} alt="cpu" />
+            <img className="w-full" src={product?.image} alt={product?.name} />
           )}
         </div>
         <div className="w-full">
           <p className="text-xl font-bold text-gray-800">{product?.name}</p>
+          <p className="text-lg text-gray-600">{product?.category}</p>
+          <p className="text-lg text-gray-600">Status: {product?.status}</p>
+          <p className="text-lg text-gray-600">
+            Rating: {product?.individualRating}
+          </p>
           <div className="flex justify-between w-full">
             <p className="text-lg text-gray-600">{product?.description}</p>
             <p className="text-lg font-bold text-gray-800">${product?.price}</p>
