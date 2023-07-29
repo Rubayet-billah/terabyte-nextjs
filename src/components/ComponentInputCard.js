@@ -1,5 +1,7 @@
+import { selectComponent } from "@/redux/features/pcBuilder/pcBuilderSlice";
 import Link from "next/link";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const ComponentInputCard = ({ category, component }) => {
   return (

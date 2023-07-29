@@ -1,13 +1,16 @@
-import ProductCard from "@/components/ProductCard";
+import ProductSelectCard from "@/components/ProductSelectCard";
 import RootLayout from "@/layout/RootLayout";
 import React from "react";
 
 const CategoryComponents = ({ products }) => {
   return (
-    <div>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-12">
+    <div className="py-8 px-4 lg:px-0">
+      <div className="text-2xl font-bold mb-4">
+        Choose {products[0]?.category}
+      </div>
+      <section className="grid grid-cols-1 gap-6">
         {products?.map((product) => (
-          <ProductCard key={product?.id} product={product} />
+          <ProductSelectCard key={product?.id} product={product} />
         ))}
       </section>
     </div>

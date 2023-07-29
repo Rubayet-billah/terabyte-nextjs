@@ -20,7 +20,7 @@ const PcBuilderPage = () => {
 
   return (
     <div>
-      <h1>PC Builder</h1>
+      <h1 className="text-2xl font-bold mb-4">PC Builder</h1>
       <section className="grid gap-5">
         {categories?.map((category, idx) => (
           <ComponentInputCard key={idx} category={category} />
