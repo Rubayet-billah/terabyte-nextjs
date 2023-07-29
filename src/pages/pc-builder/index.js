@@ -1,13 +1,13 @@
 import RootLayout from "@/layout/RootLayout";
-import { setProducts } from "@/redux/features/product/productSlice";
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-
-// pages/pc-builder.js
-import Link from "next/link";
 import ComponentInputCard from "@/components/ComponentInputCard";
+import { useSelector } from "react-redux";
 
 const PcBuilderPage = () => {
+  const { selectedComponents } = useSelector((state) => state.pcBuilder);
+  const values = Object.values(selectedComponents);
+  const isButtonDisabled = values.some((value) => !value);
+
   const categories = [
     { name: "CPU", path: "cpu" },
     { name: "Motherboard", path: "motherboard" },
@@ -26,6 +26,13 @@ const PcBuilderPage = () => {
           <ComponentInputCard key={idx} category={category} />
         ))}
       </section>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        disabled={isButtonDisabled}
+      >
+        Submit
+      </button>
     </div>
   );
 };

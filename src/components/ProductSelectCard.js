@@ -56,7 +56,7 @@ const ProductSelectCard = ({ product }) => {
             onClick={handleAddToBuilder}
             disabled={isComponentSelected}
           >
-            {isComponentSelected ? "Selected" : "Choose"}
+            {isComponentSelected ? "Selected" : "Add To Build"}
           </button>
         </div>
       </div>
