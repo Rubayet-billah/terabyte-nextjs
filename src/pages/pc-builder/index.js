@@ -26,13 +26,15 @@ const PcBuilderPage = () => {
           <ComponentInputCard key={idx} category={category} />
         ))}
       </section>
-      <button
-        type="submit"
-        className="btn btn-primary"
-        disabled={isButtonDisabled}
-      >
-        Submit
-      </button>
+      <div className="flex justify-center py-5">
+        <button
+          type="submit"
+          className="btn btn-primary"
+          disabled={isButtonDisabled}
+        >
+          Complete build
+        </button>
+      </div>
     </div>
   );
 };
