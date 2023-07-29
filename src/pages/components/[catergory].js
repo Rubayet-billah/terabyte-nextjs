@@ -12,7 +12,7 @@ CategoryProductPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:5000/api/products`);
+  const res = await fetch(`http://localhost:5000/products`);
   const newses = await res.json();
 
   const paths = newses?.map((news) => ({

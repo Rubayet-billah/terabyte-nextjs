@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
   const isNew = true;
 
   return (
-    <Link href={`/product/${_id}`}>
+    <Link href={`/products/${_id}`}>
       <div className="card w-96 shadow-xl">
         <figure>
           <img src={image} alt={name} />

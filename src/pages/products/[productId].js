@@ -1,6 +1,6 @@
 import RootLayout from "@/layout/RootLayout";
 
-const ProductDetails = () => {
+const ProductDetails = ({ product }) => {
   return <div>from product details</div>;
 };
 
@@ -11,11 +11,10 @@ ProductDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:3000/api/products`);
+  const res = await fetch(`http://localhost:5000/products`);
   const products = await res.json();
-
   const paths = products?.data?.map((product) => ({
-    params: { productId: "" + product?.id },
+    params: { productId: "" + product?._id },
   }));
 
   return { paths, fallback: false };
@@ -24,12 +23,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/products/${params?.productId}`
+    `http://localhost:5000/products/${params?.productId}`
   );
   const data = await res.json();
   return {
     props: {
-      products: data,
+      product: data,
     },
     // revalidate: 30,
   };
