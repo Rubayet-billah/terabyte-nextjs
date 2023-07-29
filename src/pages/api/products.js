@@ -1,5 +1,13 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient, ObjectId, ServerApiVersion } from "mongodb";
+import express from "express";
+import cors from "cors";
 require("dotenv").config();
+
+const app = express();
+
+// middlewares
+app.use(cors());
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bhwsqpg.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -21,13 +29,39 @@ async function run(req, res) {
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
 
-    if (req.method === "GET") {
-      const newses = await productsCollection.find({}).toArray();
-      res.send({ message: "Success", status: 200, data: newses });
-    }
+    app.get("/products", async (req, res) => {
+      console.log(req.query);
+      const products = await productsCollection.find({}).toArray();
+      res.status(200).json({ message: "Success", data: products });
+    });
+
+    // if (req.method === "GET") {
+    //   console.log(req.query);
+    //   const id = req.query.productId;
+
+    //   if (id) {
+    //     // Fetch a single product by its ObjectId
+    //     const product = await productsCollection.findOne({
+    //       _id: new ObjectId(id),
+    //     });
+    //     if (product) {
+    //       res.status(200).json({ message: "Success", data: product });
+    //     } else {
+    //       res.status(404).json({ message: "Product not found" });
+    //     }
+    //   } else {
+    //     // Fetch all products if productId is not provided
+    //     const products = await productsCollection.find({}).toArray();
+    //     res.status(200).json({ message: "Success", data: products });
+    //   }
+    // }
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   } finally {
-    // Ensures that the client will close when you finish/error
+    // Ensure that the client will close when you finish/error
     // await client.close();
   }
 }
+
 export default run;

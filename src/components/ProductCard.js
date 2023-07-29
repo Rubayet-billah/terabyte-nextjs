@@ -1,7 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 const ProductCard = ({ product }) => {
   const {
+    _id,
     name,
     category,
     price,
@@ -18,7 +20,7 @@ const ProductCard = ({ product }) => {
   const isNew = true;
 
   return (
-    <div>
+    <Link href={`/product/${_id}`}>
       <div className="card w-96 shadow-xl">
         <figure>
           <img src={image} alt={name} />
@@ -43,7 +45,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
