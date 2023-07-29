@@ -36,7 +36,11 @@ const ProductSelectCard = ({ product }) => {
       } rounded-lg shadow-md`}
     >
       <div className="flex items-center space-x-4">
-        <div className="h-20 w-20 bg-gray-200 rounded-lg flex-shrink-0"></div>
+        <div className="h-20 w-20 bg-gray-200 rounded-lg flex-shrink-0">
+          {product?.image && (
+            <img className="w-full" src={product?.image} alt="cpu" />
+          )}
+        </div>
         <div className="w-full">
           <p className="text-xl font-bold text-gray-800">{product?.name}</p>
           <div className="flex justify-between w-full">
