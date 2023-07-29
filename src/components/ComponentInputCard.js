@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ComponentInputCard = ({ category, component }) => {
@@ -16,7 +17,9 @@ const ComponentInputCard = ({ category, component }) => {
           </div>
         </div>
         <div>
-          <button className="btn btn-primary">Choose</button>
+          <Link href={`/pc-builder/${category?.path}`}>
+            <button className="btn btn-primary">Choose</button>
+          </Link>
         </div>
       </div>
     </div>
