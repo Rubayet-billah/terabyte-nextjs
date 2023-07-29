@@ -3,15 +3,29 @@ import { setProducts } from "@/redux/features/product/productSlice";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-const PcBuilderPage = ({ products }) => {
-  const dispatch = useDispatch(); // Initialize useDispatch
+// pages/pc-builder.js
+import Link from "next/link";
+import ComponentInputCard from "@/components/ComponentInputCard";
 
-  useEffect(() => {
-    dispatch(setProducts(products));
-  }, [dispatch, products]);
+const PcBuilderPage = () => {
+  const categories = [
+    { name: "CPU", path: "cpu" },
+    { name: "Motherboard", path: "motherboard" },
+    { name: "RAM", path: "ram" },
+    { name: "Power Supply Unit", path: "power-supply" },
+    { name: "Storage Device", path: "storage" },
+    { name: "Monitor", path: "monitor" },
+    { name: "Others", path: "others" },
+  ];
+
   return (
     <div>
-      <h1>{products?.length}</h1>
+      <h1>PC Builder</h1>
+      <section className="grid gap-5">
+        {categories?.map((category, idx) => (
+          <ComponentInputCard key={idx} category={category} />
+        ))}
+      </section>
     </div>
   );
 };
