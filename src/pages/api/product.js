@@ -17,10 +17,20 @@ async function connectDatabase() {
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
+    const { id } = req.query;
+    console.log(req.query);
+
     try {
       const productsCollection = await connectDatabase();
-      const products = await productsCollection.find({}).toArray();
-      res.status(200).json({ message: "Success", data: products });
+      const product = await productsCollection.findOne({
+        _id: new ObjectId(id),
+      });
+
+      if (!product) {
+        res.status(404).json({ message: "Product not found" });
+      } else {
+        res.status(200).json({ message: "Success", data: product });
+      }
     } catch (error) {
       console.error("Error connecting to MongoDB:", error);
       res.status(500).json({ message: "Internal Server Error" });

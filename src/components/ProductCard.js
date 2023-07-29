@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
           {/* Highlight the category */}
           <div className="card-actions">
             {/* Display the status and individualRating */}
-            <div className="badge badge-outline">Status: {status}</div>
+            <div className="badge badge-outline">{status}</div>
             <div className="badge badge-outline">{individualRating}*</div>
             {/* You can display other relevant badges here */}
           </div>
