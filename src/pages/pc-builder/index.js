@@ -18,6 +18,10 @@ const PcBuilderPage = () => {
     { name: "Others", path: "others" },
   ];
 
+  const handleBuildSuccess = () => {
+    alert("build successfully done");
+  };
+
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">PC Builder</h1>
@@ -28,6 +32,7 @@ const PcBuilderPage = () => {
       </section>
       <div className="flex justify-center py-5">
         <button
+          onClick={() => handleBuildSuccess()}
           type="submit"
           className="btn btn-primary"
           disabled={isButtonDisabled}
