@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link href={`/products/${_id}`}>
-      <div className="card w-96 shadow-xl">
+      <div className="card w-96 shadow-xl hover:scale-105 duration-100">
         <figure>
           <img src={image} alt={name} />
         </figure>

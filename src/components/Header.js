@@ -16,7 +16,7 @@ const Header = () => {
       <li tabIndex={0}>
         <details>
           <summary>Components</summary>
-          <ul className="p-2 bg-slate-200">
+          <ul className="p-2 bg-slate-200 z-10">
             {categories?.map((category, idx) => (
               <li key={idx}>
                 <Link href={`/components/${category?.path}`}>
