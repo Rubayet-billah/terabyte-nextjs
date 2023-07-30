@@ -1,7 +1,10 @@
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
 const Header = () => {
+  const { data: session } = useSession();
+  const userEmail = session?.user?.email;
   const categories = [
     { name: "CPU", path: "cpu" },
     { name: "Motherboard", path: "motherboard" },
@@ -27,9 +30,11 @@ const Header = () => {
           </ul>
         </details>
       </li>
-      <li>
-        <a>Item 3</a>
-      </li>
+      {!userEmail && (
+        <li>
+          <a>Login</a>
+        </li>
+      )}
     </>
   );
 
@@ -68,9 +73,14 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end ">
-        <Link href="/pc-builder" className="btn text-white">
-          PC Builder
-        </Link>
+        {userEmail && (
+          <>
+            <Link href="/pc-builder" className="btn text-white">
+              PC Builder
+            </Link>
+            <button className="btn btn-warning md:ml-2">Logout</button>{" "}
+          </>
+        )}
       </div>
     </div>
   );
