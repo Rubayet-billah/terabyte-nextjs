@@ -45,7 +45,13 @@ const ProductSelectCard = ({ product }) => {
         <div className="w-full">
           <p className="text-xl font-bold text-gray-800">{product?.name}</p>
           <p className="text-lg text-gray-600">{product?.category}</p>
-          <p className="text-lg text-gray-600">Status: {product?.status}</p>
+          <p
+            className={`text-lg text-gray-600 ${
+              product?.status !== "In Stock" && "text-red-600"
+            }`}
+          >
+            Status: {product?.status}
+          </p>
           <p className="text-lg text-gray-600">
             Rating: {product?.individualRating}
           </p>
@@ -60,7 +66,7 @@ const ProductSelectCard = ({ product }) => {
               isComponentSelected ? "btn-primary" : "btn-secondary"
             }`}
             onClick={handleAddToBuilder}
-            disabled={isComponentSelected}
+            disabled={isComponentSelected || product?.status !== "In Stock"}
           >
             {isComponentSelected ? "Selected" : "Add To Build"}
           </button>

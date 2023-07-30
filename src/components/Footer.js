@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 text-base-content text-black">
+      <footer className="footer p-10 text-black">
         <div>
           <svg
             width="50"
