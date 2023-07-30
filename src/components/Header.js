@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
@@ -32,7 +32,7 @@ const Header = () => {
       </li>
       {!userEmail && (
         <li>
-          <a>Login</a>
+          <Link href="/login">Login</Link>
         </li>
       )}
     </>
@@ -78,7 +78,12 @@ const Header = () => {
             <Link href="/pc-builder" className="btn text-white">
               PC Builder
             </Link>
-            <button className="btn btn-warning md:ml-2">Logout</button>{" "}
+            <button
+              onClick={() => signOut()}
+              className="btn btn-warning md:ml-2"
+            >
+              Logout
+            </button>{" "}
           </>
         )}
       </div>

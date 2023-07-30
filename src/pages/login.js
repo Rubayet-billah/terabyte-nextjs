@@ -2,11 +2,59 @@ import { signIn } from "next-auth/react";
 import React from "react";
 
 const LoginPage = () => {
+  const handleLogin = () => {
+    signIn("github", {
+      callbackUrl: `http://localhost:3000/`,
+    });
+  };
   return (
     <div>
-      <button onClick={() => signIn("github")} className="btn btn-outline">
-        GitHub Login
-      </button>
+      <div className="hero min-h-[80vh]">
+        <div className="hero-content flex-col">
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl font-bold">Login now!</h1>
+            {/* <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p> */}
+          </div>
+          <div className="card flex-shrink-0 w-full max-w-sm lg:min-w-[400px] shadow-2xl">
+            <div className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="email"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="password"
+                  className="input input-bordered"
+                />
+                <label className="label">
+                  <a href="#" className="label-text-alt link link-hover">
+                    Forgot password?
+                  </a>
+                </label>
+              </div>
+              <div className="form-control mt-6">
+                <button onClick={handleLogin} className="btn btn-primary">
+                  Github Login
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
