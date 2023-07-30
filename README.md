@@ -29,5 +29,5 @@ This is a PC Builder website built with Next.js, where users can browse and sele
 
 ```bash
 git clone <repository_url>
-cd pc-builder-website
+cd terabyte-nextjs
 ```
