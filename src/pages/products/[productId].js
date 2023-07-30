@@ -18,7 +18,7 @@ const ProductDetails = ({ product }) => {
     <div>
       <div className="max-w-3xl mx-auto mt-10">
         <div className="flex flex-wrap justify-between items-center">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 md:pr-8">
             <img src={image} alt={name} className="w-full h-auto" />
           </div>
           <div className="w-full md:w-1/2 mt-6 md:mt-0">

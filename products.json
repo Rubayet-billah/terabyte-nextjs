@@ -1,10 +1,10 @@
 [
   {
     "name": "Intel Core i7-10700K",
-    "category": "CPU / Processor",
+    "category": "CPU",
     "price": 329.99,
     "status": "In Stock",
-    "image": "/images/cpu1.jpg",
+    "image": "https://images.unsplash.com/photo-1540829917886-91ab031b1764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvY2Vzc29yfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "description": "Intel Core i7 10th Gen unlocked processor for gaming and content creation.",
     "keyFeatures": {
       "Brand": "Intel",
@@ -29,14 +29,15 @@
         "rating": 4,
         "comment": "Handles video editing well."
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "name": "AMD Ryzen 9 5900X",
-    "category": "CPU / Processor",
+    "category": "CPU",
     "price": 549.99,
     "status": "In Stock",
-    "image": "/images/cpu2.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1681426701125-bed484a8c829?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2Nlc3NvcnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
     "description": "AMD Ryzen 9 5000 series processor with 12 cores and 24 threads.",
     "keyFeatures": {
       "Brand": "AMD",
@@ -61,14 +62,15 @@
         "rating": 4,
         "comment": "Good for gaming setups."
       }
-    ]
+    ],
+    "featured": false
   },
   {
     "name": "ASUS ROG Strix B550-F",
     "category": "Motherboard",
     "price": 189.99,
     "status": "In Stock",
-    "image": "/images/mb1.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1681426669771-d2113672a49b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdGhlcmJvYXJkfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "description": "High-performance ATX motherboard with PCIe 4.0 support.",
     "keyFeatures": {
       "Brand": "ASUS",
@@ -94,14 +96,15 @@
         "rating": 4,
         "comment": "Good for gaming setups."
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "name": "GIGABYTE B450M DS3H",
     "category": "Motherboard",
     "price": 79.99,
     "status": "In Stock",
-    "image": "/images/mb2.jpg",
+    "image": "https://images.unsplash.com/photo-1522920192563-6df902920a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW90aGVyYm9hcmR8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60",
     "description": "Budget-friendly Micro ATX motherboard with AMD B450 chipset.",
     "keyFeatures": {
       "Brand": "GIGABYTE",
@@ -127,14 +130,15 @@
         "rating": 3,
         "comment": "Decent features for an entry-level build."
       }
-    ]
+    ],
+    "featured": false
   },
   {
     "name": "Corsair Vengeance LPX 16GB",
     "category": "RAM",
     "price": 89.99,
     "status": "In Stock",
-    "image": "/images/ram1.jpg",
+    "image": "https://images.unsplash.com/photo-1592664474505-51c549ad15c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFtfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "description": "16GB DDR4 memory module for high-speed performance.",
     "keyFeatures": {
       "Brand": "Corsair",
@@ -158,14 +162,15 @@
         "rating": 4,
         "comment": "Good value for the price."
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "name": "G.SKILL Trident Z RGB 32GB",
     "category": "RAM",
     "price": 189.99,
     "status": "In Stock",
-    "image": "/images/ram2.jpg",
+    "image": "https://images.unsplash.com/photo-1592664474505-51c549ad15c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFtfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "description": "32GB DDR4 memory module with RGB lighting for high-performance and aesthetics.",
     "keyFeatures": {
       "Brand": "G.SKILL",
@@ -178,7 +183,6 @@
       "RGB": "Yes"
     },
     "individualRating": 4.7,
-    "averageRating": 4.6,
     "reviews": [
       {
         "username": "rgblover",
@@ -190,38 +194,40 @@
         "rating": 5,
         "comment": "Fast and stable RAM for gaming and multitasking."
       }
-    ]
+    ],
+    "featured": false
   },
   {
-    "name": "Samsung 970 EVO Plus 1TB",
-    "category": "Storage Device",
-    "price": 179.99,
+    "name": "Wacom Intuos Pro",
+    "category": "Others",
+    "price": 349.99,
     "status": "In Stock",
-    "image": "/images/storage1.jpg",
-    "description": "High-speed NVMe SSD with 1TB storage capacity.",
+    "image": "/images/other2.jpg",
+    "description": "Professional graphics tablet with pressure sensitivity and customizable keys.",
     "keyFeatures": {
-      "Brand": "Samsung",
-      "Model": "970 EVO Plus",
-      "Capacity": "1TB",
-      "Interface": "NVMe PCIe 3.0 x4",
-      "Read Speed": "3500 MB/s",
-      "Write Speed": "3300 MB/s",
-      "Form Factor": "M.2 2280",
-      "Endurance": "600 TBW"
+      "Brand": "Wacom",
+      "Model": "Intuos Pro",
+      "Active Area": "Medium (8.7 x 5.8 inches)",
+      "Pressure Levels": "8192",
+      "Express Keys": "8",
+      "Touch Ring": "Yes",
+      "Pen Technology": "Battery-free EMR",
+      "Compatibility": "Windows, macOS"
     },
-    "individualRating": 4.9,
-    "averageRating": 4.8,
+    "individualRating": 4.8,
+    "averageRating": 4.7,
     "reviews": [
       {
-        "username": "speeddemon",
+        "username": "graphicdesigner",
         "rating": 5,
-        "comment": "Blazing fast SSD, great for OS and games."
+        "comment": "Precise and responsive pen tablet for design work."
       },
       {
-        "username": "videographer",
+        "username": "artistatwork",
         "rating": 4,
-        "comment": "Handles 4K video editing smoothly."
+        "comment": "Great tool for digital art and illustration."
       }
-    ]
+    ],
+    "featured": false
   }
 ]

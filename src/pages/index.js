@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import RootLayout from "@/layout/RootLayout";
@@ -13,10 +14,14 @@ const Homepage = ({ products }) => {
   }, [dispatch, products]);
   return (
     <div>
+      <Banner />
+      <h1 className="text-2xl my-12">Featured Products</h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-12">
-        {products?.map((product) => (
-          <ProductCard key={product?.id} product={product} />
-        ))}
+        {products
+          ?.filter((pr) => pr.featured)
+          .map((product) => (
+            <ProductCard key={product?.id} product={product} />
+          ))}
       </section>
     </div>
   );

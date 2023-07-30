@@ -17,7 +17,6 @@ const ProductCard = ({ product }) => {
   } = product;
 
   // Define isNew based on some condition (you can change the condition as needed)
-  const isNew = true;
 
   return (
     <Link href={`/products/${_id}`}>
@@ -29,7 +28,7 @@ const ProductCard = ({ product }) => {
           <h2 className="card-title">
             {name}
             {/* Assuming "NEW" badge is based on some condition */}
-            {isNew && <div className="badge badge-secondary">Featured</div>}
+            {featured && <div className="badge badge-secondary">Featured</div>}
           </h2>
           <p>{description}</p>
           <div className="flex justify-between">
