@@ -8,7 +8,6 @@ const ComponentInputCard = ({ category, component }) => {
     (state) => state.pcBuilder.selectedComponents
   );
 
-  console.log("from input pbc", category, component);
   const selectedOne = selectedComponents[category?.name.toLowerCase()];
 
   return (

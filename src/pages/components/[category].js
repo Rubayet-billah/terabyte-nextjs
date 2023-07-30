@@ -23,7 +23,7 @@ CategoryProductPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:5000/products`);
+  const res = await fetch(`${process.env.URL}/products`);
   const products = await res.json();
 
   // Get unique categories from the products array
@@ -44,9 +44,7 @@ export const getStaticProps = async (context) => {
   const category = params?.category;
 
   // Fetch products based on the category
-  const res = await fetch(
-    `http://localhost:5000/products?category=${category}`
-  );
+  const res = await fetch(`${process.env.URL}/products?category=${category}`);
   const data = await res.json();
 
   return {

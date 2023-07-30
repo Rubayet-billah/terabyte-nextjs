@@ -28,9 +28,7 @@ export async function getServerSideProps(context) {
   const category = params?.category;
 
   // Fetch products based on the category
-  const res = await fetch(
-    `http://localhost:5000/products?category=${category}`
-  );
+  const res = await fetch(`${process.env.URL}/products?category=${category}`);
   const data = await res.json();
 
   return {
