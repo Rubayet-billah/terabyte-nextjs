@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import RootLayout from "@/layout/RootLayout";
@@ -23,6 +24,7 @@ const Homepage = ({ products }) => {
             <ProductCard key={product?.id} product={product} />
           ))}
       </section>
+      <Footer />
     </div>
   );
 };
